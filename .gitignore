@@ -1,2 +1,4 @@
 xlnet_model.bin
 models/
+.ipynb_checkpoints/
+__MACOSX/
