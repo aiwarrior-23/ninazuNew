@@ -1,0 +1,131 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - symptoms_more
+  - report_submission
+  - test_result_time
+  - Nasal_Endoscopy_question
+  - pain_during_test
+  - reports_question
+  - ct_scan
+  - nasal_sinus
+  - Allergy_testing
+  - Ear_infection
+  - tonsils_test
+  - sample_collection
+  - conclusion
+  - tests_price   
+  - enter_symptoms
+
+slots:
+  allSymptoms:
+    type: text
+
+actions:
+  - action_symptoms
+  - action_utter_predictions
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_symptoms_dialogue:
+  - text: |
+          Please enter the symptoms. Type "stop" when you are done
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_share_images1:
+  - text: "Please find the image of your Nasal Endoscopy:"
+    image: "https://media.springernature.com/original/springer-static/image/chp%3A10.1007%2F978-1-4939-0265-1_16/MediaObjects/300053_2_En_16_Fig8_HTML.jpg"
+
+  utter_share_images2:
+  - text: "Your Test Results are below: "
+    image: "https://www.researchgate.net/profile/Mircea-Chirica/publication/51587376/figure/tbl1/AS:667087404019720@1536057439676/Endoscopic-classification-of-corrosive-injuries-according-to-Zargar-et-al-8.png"
+
+  utter_share_images3:
+  - text: "Analysis of your Results is given below: "
+    image: "https://ars.els-cdn.com/content/image/1-s2.0-S1016319013000463-gr4.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, Thank you!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_tonsils :
+  - text : "Here is the info about tonsils test." 
+    image : "https://www.mayoclinic.org/diseases-conditions/tonsillitis/diagnosis-treatment/drc-20378483"
+
+  utter_nsalendoscopy:
+  - text : "Here is the info on Sinus test "
+    image : "https://www.mayoclinic.org/diseases-conditions/acute-sinusitis/diagnosis-treatment/drc-20351677"
+  
+  utter_ear_infection1:
+  - text : |
+            Following are the symptoms of having an ear infection.
+            1. earache
+            2. mild deafness or the sensation that sound is muffled
+            3. ear discharge
+            4. fever
+            5. headache
+            6. loss of appetite
+            7. itchiness of the outer ear
+            8. blisters on the outer ear or along the ear canal
+            9. noises in the ear – such as buzzing or humming
+            10. vertigo (loss of balance).
+
+  utter_ear_infection2:
+  - text : |
+            Following are the causes of having an ear infection.
+            1. upper respiratory tract infections
+            2. sudden changes in air pressure – such as during airline travel
+            3. smaller than average Eustachian tubes, or a blocked Eustachian tube
+            4. cleft palate
+            5. young age – babies and children are more prone to ear infections
+            6. swimming in polluted water
+            7. failing to dry the outer ear properly after swimming or bathing
+            8. overzealous cleaning of the ears, which can scratch the delicate tissues.
+
+
+  utter_ear_infection3 :
+  - text : "Are you facing any symptoms?"
+    buttons:
+    - title: "Yes"
+      payload: "/utter_symptoms"
+    - title: "No"
+      payload: "/utter_labreports"
+
+  
+  utter_labreports:
+  - text : "It takes upto 48 hours for the lab results to come. You will be intimated via call/sms when the reports are ready."
+
+  utter_pain:
+  - text : "You might experience a little pain or no pain related to procedure.Not to worryy The doctotrs take good care so that you dont face any pain."
+
+  utter_samplecollection:
+  - text : "Once you book test you can contact the given number for your convinece of test either at home or lab."
+
+  utter_reportquestion:
+  - text : "All your questions about reports will be answered one on one by doctor for better understanding."
+
+  utter_anyother_question:
+  - text : "Are there any other questions?"
+
+  utter_testprice:
+  - text : "The price will be told to you by the diagnostic center"

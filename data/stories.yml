@@ -1,0 +1,139 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: happy path 1
+  steps:
+  - user: |
+      hello there!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      amazing
+    intent: mood_great
+  - action: utter_happy
+
+- story: happy path 2
+  steps:
+  - user: |
+      hello there!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      amazing
+    intent: mood_great
+  - action: utter_happy
+  - user: |
+      bye-bye!
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: sad path 1
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      not good
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      yes
+    intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      not good
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      not really
+    intent: deny
+  - action: utter_goodbye
+
+- story: sad path 3
+  steps:
+  - user: |
+      hi
+    intent: greet
+  - action: utter_greet
+  - user: |
+      very terrible
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      no
+    intent: deny
+  - action: utter_goodbye
+
+- story: say goodbye
+  steps:
+  - user: |
+      bye-bye!
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: bot challenge
+  steps:
+  - user: |
+      are you a bot?
+    intent: bot_challenge
+  - action: utter_iamabot
+
+- story: conclusion
+  steps:
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+
+- story: user_sinus
+  steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: Nasal_Endoscopy_question
+   - action: utter_nsalendoscopy
+   - action: utter_anyother_question
+   - intent: tests_price
+   - action: utter_testprice 
+   - intent: deny
+   - action: utter_goodbye     
+
+- story: user_test_results
+  steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: share_images
+   - action: utter_share_images1
+   - action: utter_share_images2
+   - action: utter_share_images3
+   - action: utter_did_that_help
+   - intent: affirm
+   - action: utter_happy
+
+- story: user_ear_infection
+  steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: Ear_infection
+   - action: utter_ear_infection1
+   - action: utter_ear_infection2
+   - action: utter_ear_infection3
+
+- story: utter_symptoms
+  steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: enter_symptoms
+   - action: utter_symptoms_dialogue
+   - action: action_symptoms
+   - action: action_utter_predictions

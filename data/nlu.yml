@@ -1,0 +1,229 @@
+version: "2.0"
+ 
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+  
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+ 
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+ 
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+ 
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+ 
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+ 
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+ 
+- intent: symptoms_more
+  examples: |
+    - No i don't have any other symptoms
+    - Yes, i have few more symptoms
+    - No, i don't have
+    - Yes, i have
+    - Yes i have few other minor symptoms
+    - No i dont have any more
+    - No
+    - yes , but i cannot explain on chat
+    - can I tell the doctor about other symptoms
+ 
+ 
+- intent: report_submission
+  examples: | 
+    - Yes
+    - No
+    - Yes, I have reports to submit
+    - No, i don't have any reports to submit
+    - yeah I have submitted
+ 
+- intent: test_result_time
+  examples: |
+    - how long will it take for reports to come?
+    - will I get my results in a day?
+    - how long does a CT scan take?
+    - How long will a blood test result take?
+    - Can i get my results by today?
+    - Will my reports be ready by tomorrow?
+    - Can I get reports by tomorrow?
+
+- intent: share_images
+  examples: |
+    - Can you share images of my nasal endoscopy?
+    - Can you share my test results
+    - can you tell me if my test were normal?
+    - can you share my ct scan results?
+    - can you tell me optimal test values?
+ 
+- intent: Nasal_Endoscopy_question
+  examples: |
+    - Is my nose clear or are there any blockages in it?
+    - Will it hurt during the endoscopy?
+    - Will I be under anesthesia during the procedure?
+    - Can you tell  me if my tests were normal?
+ 
+- intent: pain_during_test
+  examples: |
+    - Will it pain during the surgery?
+    - Will I be given anesthesia?
+    - can the procedure hurt me?
+    - will it bleed a lot during test?
+    - can it bleed after the test?
+    - will it hurt during the exam?
+    - will it hurt after the exam?
+    - will it hurt after the test?
+    - will it hurt during the test?
+    - will my ear pain?
+    - will my nose pain?
+ 
+- intent: ct_scan
+  examples: |
+    - Can you tell me about ct scan?
+    - can ct scan result to cancer?
+    - Is ct scan expensive?
+    - can you share normal ct scan results?
+ 
+- intent: nasal_sinus
+  examples: |
+    - Is it like a covid test?
+    - does it itch in the nose?
+    - can you explain the procedure?
+    - what all is checked?
+ 
+- intent: Allergy_testing
+  examples: |
+    - Will blood also be taken along with skin?
+    - What all allergies are detected?
+    - Does allergy affect sinus?
+ 
+- intent: Ear_infection
+  examples: |
+    - What germs are checked?
+    - Do you take blood or pus?
+    - what stuff you take from ear?
+    - Will i go deaf after a while?
+    - Will you know if my eardrum is adjusted or not?
+    - will injection be used inside ear?
+ 
+- intent: tonsils_test
+  examples: |
+    - can you tell me about tonsils test?
+    - What values are checked in cbc?
+    - what all values are checked in cbc?
+ 
+- intent: sample_collection
+  examples: |
+    - do i need to go to clinic for test?
+    - can somoneoe come home to collect samples?
+    - is hometest also an option?
+    - compulsory to go to lab?
+    - I am old and I cannot go to lab.
+ 
+- intent: conclusion
+  examples: |
+    - Thank you  for the medical asssistance.
+    - Thank you for assisting me.
+    - Thank you for your assistance it was really helpful.
+    - very happy with the services.
+    - Will recommend you to friends and family.
+    - Amazing experinece
+    - Thanks for explainnig in detail and making me recover.
+    - very easy service. Amazing job.
+ 
+- intent: tests_price
+  examples: |
+    - how much will each test cost?
+    - Will I get any discount on tests from labs referred by you?
+    - Any extra charges for home sample collection?
+    - Can I use medicalim?
+    - I have health insuarance! Can you claim from it?
+    - Can I pay through credit card?
+    - What all payment options are supported?
+    - What payment options are there?
+    - I cannot pay online. Is there any alternative?
+    - No online payment availabe.
+    - Can I pay directly at the lab?
+
+- intent: enter_symptoms
+  examples: |
+    - I want to enter my symptoms
+    - Enter Symptoms
+    - These are the symptoms I am facing
+    - I am facing these symptoms
+ 
+
